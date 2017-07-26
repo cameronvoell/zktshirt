@@ -4,10 +4,22 @@
 <title></title>
 <meta name=generator content="Org mode">
 <link rel=stylesheet href=static/home.css>
+<script src="./app.js?v=0"></script>
 <body>
 <div id=content>
 <img src="background-test.png" alt="three wise monkeys" align="middle">
+<div id=input>
+<br><label for="Mailing Address">Mailing Address:</label><input type="text" id="mailingAddress" placeholder="e.g., 1 Hacker Way, Menlo Park, 12345"></input>
+<br><label for="Return Z-Address">Return z-addr:</label><input type="text" id="returnZAddress" placeholder="e.g., z12345..."></input>
+<br><label for="T-Shirt Size">T-Shirt Size:</label><input type="text" id="tshirtSize" placeholder="e.g., S, M, L, XL"></input>
+<br><br><button id="Generate Zcash Command" onclick="App.generateZcashCommand()">Generate Zcash Command</button>
+<br><label for="Zcash Command">Zcash Command:</label><p  type="text" id="zcashCommand" style="word-wrap: break-word">zcash-cli z_sendmany "FROM_ADDRESS" "[{\"amount\": 0.007, \"address\": \"TO_ADDRESS\", \"memo\": RAW_DATA_HEXADECIMAL }]"</p>
 </div>
+
+</div>
+
+
+
 </body>
 
 </html>
