@@ -6,11 +6,23 @@ window.App = {
   generateZcashCommand: function() {
      var returnZAddress = document.getElementById("returnZAddress").value;  
      var mailingAddress = document.getElementById("mailingAddress").value;  
+     var radios = document.getElementsByName('tshirtSize');
+     var shirtSize;
+     for (var i = 0, length = radios.length; i < length; i++) {
+       if (radios[i].checked) {
+         //alert(radios[i].value);
+         shirtSize = radios[i].value;
+         // only one radio can be logically checked, don't check the rest
+         break;
+       }   
+     }   
      
+     var hexShirtSize = asciiToHexString(shirtSize);
      var hexReturnZAddress = asciiToHexString(returnZAddress);
      var hexMailingAddress = asciiToHexString(mailingAddress);
+     
 
-     var memoData = hexReturnZAddress + hexMailingAddress;
+     var memoData = hexShirtSize + hexReturnZAddress + hexMailingAddress;
      //var memoData = returnZAddress + hexMailingAddress;
      
      var zcashCommandTextElement = document.getElementById("zcashCommand"); 
