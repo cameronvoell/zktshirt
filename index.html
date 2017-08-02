@@ -4,33 +4,44 @@
 <title></title>
 <meta name=generator content="Org mode">
 <link rel=stylesheet href=static/home.css>
-<script src="./app.js?v=0"></script>
+<script src="./app.js?v=3"></script>
 <body>
 <div id=content>
 <img src="zktshirthomepage.png" alt="three wise monkeys" align="middle">
-<div id=input>
 <div id=shirtPics>
 <img src="tshirtfront.jpg" alt="tshirt front" align="left">
 <img src="tshirtback.jpg" alt="tshirt back" align="right">
 </div>
 <br>
-<br>
-<br><label for="Mailing Address">Mailing Address:</label><input type="text" size="50"id="mailingAddress" placeholder="e.g., 1 Hacker Way, Menlo Park, 12345"></input>
+<p> Platforms Supported: Linux <br>
+Payment Methods Accepted: Zcash</p>
+<div id=input>
+<h3>Enter info, generate and send zcash-cli command, and receive a tshirt:</h3>
+<label for="Mailing Address">Mailing Address:</label><input type="text" size="50"id="mailingAddress" placeholder="e.g., 1 Hacker Way, Menlo Park, 12345"></input>
 <br><label for="Return Z-Address">Return z-addr:</label><input type="text" size="96" style="font-size:11px" id="returnZAddress" placeholder="e.g., z12345..."></input>
+<div>
  <form>
   <input type="radio" name="tshirtSize" value="1" checked> Small
   <input type="radio" name="tshirtSize" value="2" > Medium
   <input type="radio" name="tshirtSize" value="3" > Large
   <input type="radio" name="tshirtSize" value="4" > X-Large
 </form> 
+</div>
 <button id="Generate Zcash Command" onclick="App.generateZcashCommand()">Generate Zcash Command</button>
 <br><label for="Zcash Command">Zcash Command:</label><p  type="text" id="zcashCommand" style="word-wrap: break-word"></p>
 </div>
 
+<h3>Links for more info:</h3>
+<ul class=org-ul>
+<li>What is a Zero Knowledge Proof? <br><a target="_blank" href=https://en.wikipedia.org/wiki/Zero-knowledge_proof>https://en.wikipedia.org/wiki/Zero-knowledge_proof</a>
+<li>What is Zcash? <br><a target="_blank" href=https://z.cash/>https://z.cash/</a>
+<li>How can I obtain some Zcash? <br><a target="_blank" href=https://shapeshift.io/legacy/>https://shapeshift.io/legacy/</a>
+<li> How can I install Zcash? <br><a target="_blank" href=https://z.cash/download.html>https://z.cash/download.html</a>
+<li> When will Ethereum have zksnark enabled private transactions? <br><a target="_blank" href=https://github.com/ethereum/EIPs/pull/212>https://github.com/ethereum/EIPs/pull/212</a><br><a target="_blank" href=https://github.com/ethereum/EIPs/pull/213>https://github.com/ethereum/EIPs/pull/213</a>
+<li> What is Tezos stand on zksnarks and private transactions? <br><a target="_blank" href=https://www.tezos.com/static/papers/Tezos_Overview.pdf>"Our initial plan is to strike a compromise and integrate Zcash’s proof circuit in the protocol, but restrict its operations to a special token issued on the Tezos blockchain. "</a>
+</ul>
+
 </div>
-
-
-
 </body>
 
 </html>
